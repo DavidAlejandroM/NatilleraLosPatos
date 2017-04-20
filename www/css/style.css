@@ -1,1 +1,13 @@
-/* Empty. Add your own CSS if you like */
+md-input-container
+{
+  /*margin-left: 5% !important;*/
+  margin-bottom: 0 !important;
+  height: 30px !important;
+  width: 100%;
+}
+
+.row
+{
+  height: auto!important;
+}
+

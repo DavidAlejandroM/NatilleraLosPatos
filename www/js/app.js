@@ -4,7 +4,13 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers'])
+angular.module('starter', ['ionic', 'ngMaterial' ,'starter.controllers',
+  'MenuController',
+  /*controladores tesorero*/
+  'SociosListaController','RegistroSocioController',
+  'MensualidadController',
+  'PrestamoController'
+])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -29,17 +35,47 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     url: '/app',
     abstract: true,
     templateUrl: 'templates/menu.html',
-    controller: 'AppCtrl'
+    controller: 'MenuController'
   })
 
-  .state('app.search', {
-    url: '/search',
+  .state('app.socios', {
+    url: '/socios',
     views: {
       'menuContent': {
-        templateUrl: 'templates/search.html'
+        templateUrl: 'templates/tesorero/socios_lista.html',
+        controller: 'SociosListaController'
       }
     }
   })
+
+    .state('app.registro_socio', {
+      url: '/registro_socio',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/tesorero/registro_socio.html',
+          controller: 'RegistroSocioController'
+        }
+      }
+    })
+    .state('app.mensualidad', {
+      url: '/mensualidad',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/tesorero/mensualidad.html',
+          controller: 'MensualidadController'
+        }
+      }
+    })
+
+    .state('app.prestamo', {
+      url: '/prestamo',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/tesorero/prestamo.html',
+          controller: 'PrestamoController'
+        }
+      }
+    })
 
   .state('app.browse', {
       url: '/browse',

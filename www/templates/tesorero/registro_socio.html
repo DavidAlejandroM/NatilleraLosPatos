@@ -1,0 +1,49 @@
+<ion-view view-title="Registro">
+  <ion-nav-buttons side="primary">
+    <a class="button button-icon icon ion-android-send"ng-click="agregarSocio()"></a>
+  </ion-nav-buttons>
+  <ion-content>
+    <div class="row">
+      <div class="col">
+        <md-input-container>
+          <label>Nombres</label>
+          <input type="text" ng-model="usuario.nombre">
+        </md-input-container>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <md-input-container>
+          <label>Apellidos</label>
+          <input type="text" ng-model="usuario.apellido">
+        </md-input-container>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <md-input-container>
+          <label>Correo Electrónico</label>
+          <input type="email" ng-model="usuario.correo">
+        </md-input-container>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-50">
+        <md-input-container>
+          <label>Identificacion</label>
+          <input type="number" ng-model="usuario.identificacion">
+        </md-input-container>
+      </div>
+      <div class="col-50">
+        <md-input-container>
+          <label>Celular</label>
+          <input type="number" ng-model="usuario.celular">
+        </md-input-container>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>
