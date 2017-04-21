@@ -1,13 +1,14 @@
 <ion-view view-title="Registro">
   <ion-nav-buttons side="primary">
-    <a class="button button-icon icon ion-android-send"ng-click="agregarSocio()"></a>
+    <a class="button button-icon icon ion-android-send"ng-click="clickGuardar()"></a>
   </ion-nav-buttons>
   <ion-content>
     <div class="row">
       <div class="col">
         <md-input-container>
           <label>Nombres</label>
-          <input type="text" ng-model="usuario.nombre">
+          <input type="text" ng-model="usuario.nombres"
+                 ng-change="usuario.nombres = usuario.nombres.toUpperCase()">
         </md-input-container>
       </div>
     </div>
@@ -16,7 +17,8 @@
       <div class="col">
         <md-input-container>
           <label>Apellidos</label>
-          <input type="text" ng-model="usuario.apellido">
+          <input type="text" ng-model="usuario.apellidos"
+          ng-change="usuario.apellidos = usuario.apellidos.toUpperCase()">
         </md-input-container>
       </div>
     </div>
